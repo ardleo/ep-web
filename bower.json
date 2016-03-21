@@ -15,7 +15,13 @@
   ],
   "dependencies": {
     "iron-icons": "polymerelements/iron-icons#~1.1.3",
+    "iron-pages": "polymerelements/iron-pages#~1.0.7",
+    "neon-animation": "PolymerElements/neon-animation#~1.1.1",
     "paper-card": "polymerelements/paper-card#~1.1.1",
+    "paper-icon-button": "polymerelements/paper-icon-button#~1.0.7",
+    "paper-scroll-header-panel": "polymerelements/paper-scroll-header-panel#~1.0.15",
+    "paper-tabs": "polymerelements/paper-tabs#~1.3.7",
+    "paper-toolbar": "polymerelements/paper-toolbar#~1.1.4",
     "polymer": "Polymer/polymer#1.3.1"
   }
 }

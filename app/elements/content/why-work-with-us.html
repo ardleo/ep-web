@@ -1,0 +1,70 @@
+
+<dom-module id="why-work-with-us">
+  <template>
+  
+	<style is="custom-style">
+		#why-work-with-us{
+			@apply(--layout-horizontal);
+		}
+	
+		#code-quality{
+			@apply(--layout-flex);
+			background:#F3F4F6;
+			color:#445F85;
+			@apply(--middle-center);
+		
+		}
+		section{
+			width:50%;
+			margin:0 auto;
+			text-align:left;		
+			padding:40px 0;				
+		}
+		section h2{
+			margin:0;
+		}
+		#build-people{
+			@apply(--layout-flex);
+			background:#445F85;
+			color:#fff;
+			@apply(--middle-center);
+		}
+	</style>
+	
+	<div id="why-work-with-us">
+			<div id="code-quality" class="">
+				<section>
+					<h2>Why Work with Us</h2>
+					<p>As we're a small team of developers, you'll get the chance to work on a variety of cool projects. </p>
+					<p>What's more, if you like the idea of not having to dress up to come to office, preferring to turn up in a T-shirt and jeans, then this is the place for you.</p>
+				</section>
+			</div>
+			<div id="build-people" class="">
+				<section>
+					<h2>Who we're looking for</h2>
+					<p>We're looking for someone who's:</p>
+					<ul>
+						<li>Willing to go the extra mile to help other team members</li>
+						<li>Good with solving problems</li>
+						<li>Open minded and happy to work outside their comfort zone</li>
+						<li>Most importantly, fun to work with!</li>
+					</ul>
+				</section>
+			</div>
+	</div>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'why-work-with-us',
+        properties: {
+		},
+        ready: function() {
+        }
+      });
+    })();
+  </script>
+</dom-module>

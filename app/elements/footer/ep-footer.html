@@ -1,0 +1,86 @@
+
+<dom-module id="ep-footer">
+  <template>
+  
+	<style is="custom-style">
+		footer{
+			background:#F3F4F6;
+			color:#666;
+		}
+		#inner-footer{
+			display:flex;
+		}
+		#inner-footer div{
+			padding:20px;
+		}
+		#footer-bar{
+			@apply(--layout-horizontal);
+			@apply(--layout-justified);
+			padding:10px 20px;
+			width:100%;
+			border-top:1px solid #ddd;
+			background:#445F85;
+			color:#fff;
+			box-sizing:border-box;
+			font-size:0.8em;
+		}
+		.side-bar{
+			width:10%;
+		}
+		.container {
+			@apply(--layout-horizontal);
+		}
+		.flexchild {
+			@apply(--layout-flex);
+		}
+		.flex2child {
+			@apply(--layout-flex-2);
+		}
+		.flex3child {
+			@apply(--layout-flex-3);
+		}
+	</style>
+	
+	<footer>
+		<div class="container">
+			<div class="side-bar"></div>
+			<div id="inner-footer" class="flexchild">
+				<div class="flex3child">
+					<h2>Latest Posts</h2>
+					<ul>
+						<li><a href="https://www.tone.co.uk/hallmarks-standout-digital-agency/">Being clear on the hallmarks of a standout digital agency</a></li>
+						<li><a href="https://www.tone.co.uk/10-popular-web-technology-trends-for-2016/">10 Popular web technology trends for 2016</a></li>
+						<li><a href="https://www.tone.co.uk/what-is-interactive-content-and-why-your-business-should-be-embracing-it/">What is interactive content and why your business should embrace it?</a></li>
+					</ul>
+				</div>
+				<div class="flexchild">
+					<h2 class="after">Contact Details</h2>
+					<p><strong>PT. Errai Pasifik</strong>
+					<p>Graha Simatupang, Tower 2B Lt 5 Jl. TB. Simatupang Kav. 38 Jakarta Selatan</p>
+					<p>Phone: <a href="tel:+62217829405">+62 21 7829 405</a></p>
+				</div>
+			</div>
+			<div class="side-bar"></div>
+		</div>
+		<div id="footer-bar">
+			<div></div>
+			<div><p>&copy;2013-2016 PT. Errai Pasifik</div>
+			<div></div>
+		</div>
+	</footer>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'ep-footer',
+        properties: {
+		},
+        ready: function() {
+        }
+      });
+    })();
+  </script>
+</dom-module>

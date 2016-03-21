@@ -1,0 +1,35 @@
+
+<dom-module id="ep-home">
+  <template>
+  
+	<style is="custom-style">
+		.side-bar{
+			width:10%;
+		}
+		.container {
+			@apply(--layout-vertical);
+			background:#fff;
+		}
+	</style>
+	
+	<div class="container">		
+		<who-we-are></who-we-are>
+		<why-work-with-us></why-work-with-us>
+		<join-us></join-us>
+	</div>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'ep-home',
+        properties: {
+		},
+        ready: function() {
+        }
+      });
+    })();
+  </script>
+</dom-module>

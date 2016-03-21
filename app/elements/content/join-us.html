@@ -1,0 +1,46 @@
+
+<dom-module id="join-us">
+  <template>
+	<style is="custom-style">
+	#join-us{
+		@apply(--layout-horizontal);
+		padding: 40px 0;
+	}
+	  
+	paper-card{
+		margin: 0 auto;
+	}
+	
+	.dark {
+	  background: var(--paper-blue-grey-500);
+	}
+	
+	paper-card.dark, paper-card.amber, paper-card.lime, paper-card.cyan {
+	  color: white;
+	  --paper-card-header-color: white;
+	}
+	</style>
+	<div id="join-us">
+	  <paper-card heading="Join Us" class="dark">
+		<div class="card-actions">
+		  <paper-icon-button icon="communication:call" style="color:white;"></paper-icon-button>
+		</div>
+	  </paper-card>
+	  </div>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'join-us',
+        properties: {
+		},
+        ready: function() {
+        }
+      });
+    })();
+  </script>
+</dom-module>
+
