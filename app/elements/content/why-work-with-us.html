@@ -5,6 +5,7 @@
 	<style is="custom-style">
 		#why-work-with-us{
 			@apply(--layout-horizontal);
+			position:relative;
 		}
 	
 		#code-quality{
@@ -22,6 +23,7 @@
 		}
 		section h2{
 			margin:0;
+			@apply(--header-2);
 		}
 		#build-people{
 			@apply(--layout-flex);
@@ -29,28 +31,61 @@
 			color:#fff;
 			@apply(--middle-center);
 		}
+		#join-us{
+			position: absolute;
+			left: 50%;
+			margin-left: -91px;
+			top: 50%;
+			margin-top: -27px;
+			cursor:pointer;
+		}
+		 .amber {
+		  background: var(--paper-amber-900);
+		}
+
+		.lime {
+		  background: var(--paper-lime-500);
+		}
+
+		.cyan {
+		  background: var(--paper-cyan-500);
+		}
+
+		.dark {
+		  background: var(--paper-blue-grey-500);
+		}
+		
+		paper-card.dark, paper-card.amber, paper-card.lime, paper-card.cyan {
+		  color: white;
+		  --paper-card-header-color: white;
+		}
 	</style>
 	
 	<div id="why-work-with-us">
-			<div id="code-quality" class="">
-				<section>
-					<h2>Why Work with Us</h2>
-					<p>As we're a small team of developers, you'll get the chance to work on a variety of cool projects. </p>
-					<p>What's more, if you like the idea of not having to dress up to come to office, preferring to turn up in a T-shirt and jeans, then this is the place for you.</p>
-				</section>
-			</div>
-			<div id="build-people" class="">
-				<section>
-					<h2>Who we're looking for</h2>
-					<p>We're looking for someone who's:</p>
-					<ul>
-						<li>Willing to go the extra mile to help other team members</li>
-						<li>Good with solving problems</li>
-						<li>Open minded and happy to work outside their comfort zone</li>
-						<li>Most importantly, fun to work with!</li>
-					</ul>
-				</section>
-			</div>
+		<div id="join-us">
+			<paper-card heading="Join Us Now" class="amber">
+				<paper-ripple></paper-ripple>
+			</paper-card>
+		</div>
+		<div id="code-quality" class="">
+			<section>
+				<h2>Why Work with Us</h2>
+				<p>As we're a small team of developers, you'll get the chance to work on a variety of cool projects. </p>
+				<p>What's more, if you like the idea of not having to dress up to come to office, preferring to turn up in a T-shirt and jeans, then this is the place for you.</p>
+			</section>
+		</div>
+		<div id="build-people" class="">
+			<section>
+				<h2>Who we're looking for</h2>
+				<p>We're looking for someone who's:</p>
+				<ul>
+					<li>Willing to go the extra mile to help other team members</li>
+					<li>Good with solving problems</li>
+					<li>Open minded and happy to work outside their comfort zone</li>
+					<li>Most importantly, fun to work with!</li>
+				</ul>
+			</section>
+		</div>
 	</div>
   </template>
 
