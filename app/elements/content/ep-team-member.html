@@ -1,0 +1,100 @@
+
+<dom-module id="ep-team-member">
+  <template>
+	<style is="custom-style">
+	 .flex-wrap {
+		@apply(--layout-horizontal);
+		@apply(--layout-around-justified);
+		@apply(--layout-wrap);
+		width: 100%;
+	}
+	</style>
+	
+	<div class="container flex-wrap">
+		<template is="dom-repeat" items="{{members}}">
+			<ep-member member="{{item}}">
+			</ep-member>
+		</template>
+	</div>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'ep-team-member',
+        properties: {
+			members: Array,
+			notify: true
+		},
+        ready: function() {
+			this.members = [
+				{
+					fullname: 'Hendy Nugroho',
+					nickname: 'City Boy',
+					position: 'C# Developer',
+					photo: 'https://scontent-sin1-1.xx.fbcdn.net/hphotos-xlp1/v/t1.0-9/11060296_10153100092867383_1422379836060229117_n.jpg?_nc_eui=ARjFCPc9YF9Rrceo0YA0drepzjpndTnS8YLqTDP-NAWQYMSyL2cwPw&oh=bbdc7e96a0f4880b824b0001f6eafcb3&oe=57993E2B'
+				},
+				{
+					fullname: 'Ardall Leonardo',
+					nickname: 'Dota Sifu',
+					position: 'Web Developer',
+					socmed: [
+						{ icon: 'fa fa-facebook-official', link: 'https://www.facebook.com/ardall' },
+						{ icon: 'fa fa-linkedin', link: 'https://id.linkedin.com/in/ardall-leonardo-0582375a' },
+						{ icon: 'fa fa-twitter', link: 'https://twitter.com/ardall_leo' },
+						{ icon: 'fa fa-instagram', link: 'https://www.instagram.com/ardall_leo/' },
+						{ icon: 'fa fa-github-square', link: 'https://github.com/ardleo' }
+					],
+					photo: 'https://scontent-sin1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/11295538_10205364666054630_4777973617799063800_n.jpg?_nc_eui=ARgeeoVYG26qpnl6fjkijmPDResStg8MEaxRSEhyZHXL9KTBUWFwcw&oh=a89477ee3fdeab688baa9eb970e47e42&oe=574EC43E'
+				},
+				{
+					fullname: 'Kuncoro Dwi Atmojo',
+					nickname: 'Kun',
+					position: 'DevOps Engineer',
+					photo: 'https://scontent-sin1-1.xx.fbcdn.net/hphotos-xfp1/t31.0-8/s720x720/201760_1805308946400_6348363_o.jpg?_nc_eui=ARjnv7DrYeeBeGxD_SStQYDwSeBBkxtYqFOWRqUJhkMRTFaOECTKSw'
+				},
+				{
+					fullname: 'Nulad Pambudi',
+					nickname: 'Nulad',
+					position: 'Software Engineer',
+					photo: 'https://scontent-sin1-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/208360_10150153529803389_7909571_n.jpg?_nc_eui=ARi9sJb50RBHsWRBr-YKqbC5GGcQqlgbv9UA6opmUtvB-z4i89HeCA&oh=658f4a9e4ff7433677ee83d8555f5ac3&oe=574DDB80'
+				},
+				{
+					fullname: 'Anton Ade Purnama',
+					nickname: 'AA Anton',
+					position: 'Software Engineer',
+					photo: 'https://lh4.googleusercontent.com/-PxspmaUbG4Q/U5C3xWQYCcI/AAAAAAAAADk/ff8MX0o6bJcciTwFoCalOc-zxSYr-EB-Q/w883-h885-no/SAM_2242.JPG'
+				},
+				{
+					fullname: 'Ardall Leonardo',
+					nickname: 'Ardall',
+					position: 'Web Developer',
+					photo: 'https://scontent-sin1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/11295538_10205364666054630_4777973617799063800_n.jpg?_nc_eui=ARgeeoVYG26qpnl6fjkijmPDResStg8MEaxRSEhyZHXL9KTBUWFwcw&oh=a89477ee3fdeab688baa9eb970e47e42&oe=574EC43E'
+				},
+				{
+					fullname: 'Ardall Leonardo',
+					nickname: 'Ardall',
+					position: 'Web Developer',
+					photo: 'https://scontent-sin1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/11295538_10205364666054630_4777973617799063800_n.jpg?_nc_eui=ARgeeoVYG26qpnl6fjkijmPDResStg8MEaxRSEhyZHXL9KTBUWFwcw&oh=a89477ee3fdeab688baa9eb970e47e42&oe=574EC43E'
+				},
+				{
+					fullname: 'Ardall Leonardo',
+					nickname: 'Ardall',
+					position: 'Web Developer',
+					photo: 'https://scontent-sin1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/11295538_10205364666054630_4777973617799063800_n.jpg?_nc_eui=ARgeeoVYG26qpnl6fjkijmPDResStg8MEaxRSEhyZHXL9KTBUWFwcw&oh=a89477ee3fdeab688baa9eb970e47e42&oe=574EC43E'
+				},
+				{
+					fullname: 'Ardall Leonardo',
+					nickname: 'Ardall',
+					position: 'Web Developer',
+					photo: 'https://scontent-sin1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/11295538_10205364666054630_4777973617799063800_n.jpg?_nc_eui=ARgeeoVYG26qpnl6fjkijmPDResStg8MEaxRSEhyZHXL9KTBUWFwcw&oh=a89477ee3fdeab688baa9eb970e47e42&oe=574EC43E'
+				}
+			]
+        }
+      });
+    })();
+  </script>
+</dom-module>
+

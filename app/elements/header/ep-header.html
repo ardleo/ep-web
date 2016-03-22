@@ -4,7 +4,10 @@
     <style is="custom-style">
 	
 	:root{
-		--paper-tabs-selection-bar-color: #fff;
+		--paper-tabs-selection-bar-color:darkcyan;
+		--paper-tabs-selection-bar:{
+			height:56px; 
+		}
 	}
 
 	:host{
@@ -73,7 +76,7 @@
     }
 	
 	#menu-bar{
-		background:#445F85
+		background:cadetblue
 	}
 	.flex-center-justified {
 		@apply(--layout-horizontal);
@@ -90,7 +93,7 @@
 	.title h1,
 	.title h2,
 	.title p{		
-		@apply(--header-2);
+		font-family: 'Poiret One', cursive;
 		color:#666;
 		margin:15px 0;
 	}
@@ -102,6 +105,75 @@
 	.title h1 { 
 		color:coral;
 	}
+	
+	
+		
+		
+		#tryme{
+			position: absolute;
+			top: 11px;
+			right: 142px;
+			margin-right: 0;
+			width: 90px;
+			height: 43px;
+			position: absolute;
+			display: block;
+			
+			background-position: top left;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			-webkit-animation: tryme 7s ease-out infinite;
+			animation: tryme 7s ease-out infinite;
+			transition: opacity .3s;
+		  }
+  small{
+    font-size: 12px;
+    position: relative;
+    bottom: 4px;
+  }
+  @-webkit-keyframes tryme {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-4px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(4px);
+  }
+}
+@keyframes tryme {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-4px);
+            transform: translateX(-4px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+  }
+}
+
+
     </style>
 
 	<paper-scroll-header-panel condenses keep-condensed-header header-height="500" condensed-header-height="56">
@@ -118,7 +190,11 @@
 		  <div id="menu-bar" class="bottom indent bottom-text fit flex-center-justified" self-end>
 			<paper-tabs id="menu-list" class="" style="width:800px" selected="0" noink>
 				<template is="dom-repeat" items="{{menus}}">
-				  <paper-tab class="item-menu" style="color:#fff">{{item}}</paper-tab>
+				  <paper-tab class="item-menu" style="color:#fff">{{item}} 
+					<template is="dom-if" if="{{ showTooltip(index) }}">
+						<div id="tryme" style="background-image: url(images/tryme.png);"></div>
+					</template>
+				 </paper-tab>
 				</template>
 			</paper-tabs>
 		  </div>
@@ -161,6 +237,11 @@
 				notify: true,
 			},
         },
+		showTooltip: function(index){
+			if ( index == this.menus.indexOf('JOBS')){
+				return true;
+			}
+		},
         ready: function() {
 			this.menus = [
 				'HOME',

@@ -1,0 +1,84 @@
+
+<dom-module id="ep-member">
+  <template>
+	
+	<style is="custom-style">
+		:host{
+			margin:20px 0;
+		}
+	  .member-header { @apply(--paper-font-headline); }
+	  .description { color: var(--paper-grey-600); text-decoration:italic; }
+	  .member-position {
+		position: absolute;
+		top: 12px;
+		right: 0;
+		padding: 5px 20px;
+		font-size: 15px;
+		background: azure;
+		border-radius: 100px 0px 10px 100px;
+		border: 1px solid #ddd;
+		border-right:0;		
+	  }
+	  iron-icon.star:last-of-type { color: var(--paper-grey-500); }
+	  paper-card{
+		width:400px;
+		--paper-card-header-color: white;
+	  }
+	  
+	  paper-card{
+		--iron-image-height:400px !important;
+	  }
+	  
+	  h2{
+			@apply(--header-2);
+			color:#445F85;
+			font-size:1em;
+			margin:0;
+			float:left;
+		}
+
+
+	</style>
+	<paper-card heading="{{ member.fullname}}" image="{{ member.photo }}" fadeImage="true">
+		<div class="card-content">
+		  <div class="member-header"><h2>{{ member.fullname }}</h2>
+			<div class="member-position">
+			  <span>{{ member.position }}</span>
+			</div>
+		  </div>
+		  <p style="clear:both;margin:0;font-style: italic;font-size: 0.8em;">{{ member.nickname }}</p>
+		  <p class="description">Small plates, salads &amp; sandwiches in an intimate setting with 12 indoor seats plus patio seating.</p>
+		</div>
+		<div class="card-actions">
+		  <div class="horizontal justified">
+			<template is="dom-if" if="{{ !member.socmed }}">
+				none
+			</template>
+			<template is="dom-repeat" items="{{ member.socmed }}" as="socmed" index-as="socmed_no">
+				<a href="{{ socmed.link }}"><i class$="{{ socmed.icon }}"></i></a>
+			</template>
+		  </div>
+		</div>
+		
+		<paper-ripple></paper-ripple>
+	</paper-card>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'ep-member',
+        properties: {
+			member: Object,
+			notify:true
+		},
+        ready: function() {
+			console.log(this.member.socmed);
+        }
+      });
+    })();
+  </script>
+</dom-module>
+
